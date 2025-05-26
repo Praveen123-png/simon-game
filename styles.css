@@ -67,3 +67,15 @@ body {
   transform: scale(0.98);
   box-shadow: inset 6px 6px 1px black;
 }
+
+
+@media (max-width: 1070px){
+  .btn {
+    height: 200px;
+    width: 200;
+  }
+
+  .container{
+    width: 100%;
+  }
+}
