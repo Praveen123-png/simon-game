@@ -6,13 +6,16 @@ let started = false;
 let level = 0;
 
 
-$(document).keydown(function() {
+$(document).on("touchstart", initial); //for mobile
+$(document).on("keydown", initial);
+    
+function initial() {
     if (!started) {
-        $("h1").text(`Level ${level + 1}`)
-        nextSequence()
+        $("h1").text(`Level ${level + 1}`);
+        nextSequence();
         started = true;
     }
-});
+}
 
 
 function startOver(){
