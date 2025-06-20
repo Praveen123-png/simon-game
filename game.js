@@ -5,7 +5,6 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
-
 $(document).on("touchstart", initial); //for mobile
 $(document).on("keydown", initial);
     
@@ -56,7 +55,6 @@ function useClickHandler(){
     
         checkAnswer(userClickedPattern.length - 1);
     });
-
 }
 useClickHandler();
 
@@ -66,7 +64,6 @@ function checkAnswer(currentLevel){
     if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
         
         // console.log(`level ${level} Vetri`);
-
         if (gamePattern.length === userClickedPattern.length){
             
             setTimeout(function() {
@@ -74,7 +71,6 @@ function checkAnswer(currentLevel){
             }, 1000);
             userClickedPattern = [];
         }
-
     }
     else {
         // console.log(`level ${level} Tholvi`);
